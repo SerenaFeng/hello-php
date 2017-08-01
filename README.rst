@@ -1,5 +1,9 @@
+*********
+PHP STEPS
+*********
+
 Composer: Dependency Manager for PHP
-------------------------------------
+====================================
 
 step 1: download and install composer, outcome composer.phar
 
