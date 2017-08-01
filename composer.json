@@ -1,0 +1,6 @@
+{
+    "name": "serenafeng/hello-php",
+    "require": {
+        "monolog/monolog": "1.0.*"
+    }
+}
