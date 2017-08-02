@@ -16,5 +16,5 @@ Route::get('/home', function () {
 })->name('home');
 Route::any('/laravel/{id?}', function ($id=1) {
     return $id;
-})->where('id', '[0-9]+');
+})->where('id', '[0-9]+')->middleware('laravel');
 #Route::match(['get', 'post'], '/laravel', 'LaravelController@show');
