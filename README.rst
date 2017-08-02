@@ -24,5 +24,13 @@ step 3: publish to VCS
     the project is required
 
 
+References:
+===========
+1. `PHP Fatal error:  Uncaught ReflectionException: Class log does not exist in`_
+
+    .. __: https://laracasts.com/discuss/channels/general-discussion/class-log-does-not-exist
+
+
+
 
 e......damn laraval, see you next time :( 5555555
