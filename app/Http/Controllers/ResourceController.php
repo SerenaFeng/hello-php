@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Resource;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ResourceController extends Controller
 {
@@ -14,7 +15,8 @@ class ResourceController extends Controller
      */
     public function index()
     {
-        return view('resource-show');
+        $results = DB::select('select * from laravels');
+        return $results;
     }
 
     /**
@@ -35,7 +37,7 @@ class ResourceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::insert('insert into laravels (id, content) values(?, ?)',[1, 'test database']);
     }
 
     /**
@@ -44,9 +46,13 @@ class ResourceController extends Controller
      * @param  \App\Resource  $resource
      * @return \Illuminate\Http\Response
      */
-    public function show(Resource $resource)
+    public function show($id)
     {
-        //
+        $result = DB::select("select * from laravels where id=$id");
+        if ( $result == [] ) {
+            abort(409, "$id not exist");
+        }
+        return json_encode($result[0]);
     }
 
     /**
@@ -78,8 +84,8 @@ class ResourceController extends Controller
      * @param  \App\Resource  $resource
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Resource $resource)
+    public function destroy($id)
     {
-        //
+        return DB::delete("delete from laravels where id=$id");
     }
 }
