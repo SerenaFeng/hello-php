@@ -8,7 +8,8 @@ class LaravelController extends Controller
 {
     public function show(Request $request)
     {
-        return $request->fullUrl();
+        $url = $request->fullUrl();
+        return view('laravel', ['url' => $url]);
     }
     public function store(Request $request)
     {
