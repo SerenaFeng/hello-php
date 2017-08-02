@@ -25,3 +25,6 @@ Route::get('/rsp', function () {
            ->header('Content-type','application/json')
            ->header('X-Header-One', 'Header Value');
 });
+Route::get('blade', function () {
+    return view('child');
+});
