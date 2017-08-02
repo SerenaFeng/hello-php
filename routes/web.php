@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('welcome');
-});
+})->name('home');
+Route::any('/laravel/{id?}', function ($id=1) {
+    return $id;
+})->where('id', '[0-9]+');
+#Route::match(['get', 'post'], '/laravel', 'LaravelController@show');

@@ -15,3 +15,5 @@ export PATH=$HOME/.composer/vendor/bin:$PATH
 #install laravel under the current directory
 laravel new
 
+# Writing Service
+php artisan make:provider RiakServiceProvider
