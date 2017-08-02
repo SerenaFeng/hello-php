@@ -26,7 +26,7 @@ step 3: publish to VCS
 
 References:
 ===========
-1. PHP Fatal error:  Uncaught ReflectionException: Class log does not exist in _
+1. `PHP Fatal error:  Uncaught ReflectionException: Class log does not exist in`__
 
     .. __: https://laracasts.com/discuss/channels/general-discussion/class-log-does-not-exist
 
