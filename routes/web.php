@@ -20,3 +20,8 @@ Route::any('/laravel/{id}', function ($id=1) {
 Route::post('/laravel', 'LaravelController@store');
 Route::get('/laravel', 'LaravelController@show');
 Route::resource('resources', 'ResourceController');
+Route::get('/rsp', function () {
+    return response("{\"name\": \"serena\"}", 200)
+           ->header('Content-type','application/json')
+           ->header('X-Header-One', 'Header Value');
+});
