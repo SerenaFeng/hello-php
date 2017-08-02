@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 
 class LaravelController extends Controller
 {
-    public function show()
+    public function show(Request $request)
     {
-        return view('laravel');
+        return $request->fullUrl();
+    }
+    public function store(Request $request)
+    {
+        return $request->getContent();
     }
 }
